@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Backbone API - Collection Instance</title>
+		<!-- css begin -->
+		<link rel="stylesheet" href="/public/css/render.css" />
+		<!-- css end -->
+	</head>
+	<body>
+
+		<!-- doc-wrap begin -->
+		<div class="doc-wrap">
+			<nav>
+				<a href="/">Home</a>
+			</nav>
+			<h1>Backbone API - Collection Instance</h1>
+			<h2>Collection Instance CRUD</h2>
+			<!-- grid-a begin -->
+			<div class="grid-a">
+				<!-- row begin -->
+				<div class="row">
+					<div class="block-a">
+						<h3>
+							CREATE model
+						</h3>
+					</div>
+					<div class="block-b">
+						<h4>
+							add individual model
+						</h4>
+						<span class="code-block">
+							<span>
+								&lt;collectionInstance&gt;.add( &lt;modelInstance&gt; )
+							</span>
+						</span>
+						<h4>
+							add multiple models
+						</h4>
+						<span class="code-block">
+							<span>
+								&lt;collectionInstance&gt;.add( [
+									<span>
+										&lt;modelInstance_1&gt;, ., ., &lt;modelInstance_N&gt;
+									</span>
+								] )
+							</span>
+						</span>
+					</div>
+				</div>
+				<!-- row end -->
+
+				<!-- row begin -->
+				<div class="row">
+					<div class="block-a">
+						<h3>
+							READ model
+						</h3>
+					</div>
+					<div class="block-b">
+						<h4>
+							Read individual model
+						</h4>
+						<span class="code-block">
+							<span>
+								&lt;collectionInstance&gt;.get( "&lt;modelInstanceId&gt;" )
+							</span>
+						</span>
+						<ul>
+							<li>
+								"modelInstanceId" might be any one of id, cid, idAttribute 
+							</li>
+						</ul>						
+						<h4>
+							Read multiple models
+						</h4>
+						<span class="code-block">
+							<span>
+								&lt;collectionInstance&gt;.toJSON( )
+							</span>
+						</span>
+						<span class="code-block">
+							<span>
+								&lt;collectionInstance&gt;.toArray( )
+							</span>
+						</span>
+					</div>
+				</div>
+				<!-- row end -->
+
+				<!-- row begin -->
+				<div class="row">
+					<div class="block-a">
+						<h3>
+							UPDATE model
+						</h3>
+					</div>
+					<div class="block-b">
+						<h4>
+							update individual model
+						</h4>
+						<span class="code-block">
+							<span>
+								&lt;collectionInstance&gt;.add( &lt;modelInstance&gt;, {
+									<span>
+										merge: true
+									</span>
+								} )
+							</span>
+						</span>
+						<h4>
+							update multiple models
+						</h4>
+						<span class="code-block">
+							<span>
+								&lt;collectionInstance&gt;.add( [
+									<span>
+										&lt;modelInstance_1&gt;, ., ., &lt;modelInstance_N&gt;
+									</span>
+								], {
+									<span>
+										merge: true
+									</span>
+								} )
+							</span>
+						</span>
+						<ul>
+							<li>
+								updating model(s) depends on "modelInstanceId"
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- row end -->
+
+				<!-- row begin -->
+				<div class="row">
+					<div class="block-a">
+						<h3>
+							DELETE model
+						</h3>
+					</div>
+					<div class="block-b">
+						<h4>
+							remove individual model
+						</h4>
+						<span class="code-block">
+							<span>
+								&lt;collectionInstance&gt;.remove( &lt;modelInstance&gt; )
+							</span>
+						</span>
+						<h4>
+							remove multiple models
+						</h4>
+						<span class="code-block">
+							<span>
+								&lt;collectionInstance&gt;.remove( [
+									<span>
+										&lt;modelInstance_1&gt;, ., ., &lt;modelInstance_N&gt;
+									</span>
+								] )
+							</span>
+						</span>
+						<ul>
+							<li>
+								deleting model(s) depends on "modelInstanceId"
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- row end -->
+			</div>
+			<!-- grid-a end -->
+		</div>
+		<!-- doc-wrap end -->
+
+
+		<!-- script begin -->
+		<script type="text/template" id="page-layout">
+			//TODO: template for page navigation layout
+		</script>
+		<script src="/public/script/lib/requirejs/require.js"></script>
+		<script>
+			require( ["/public/script/config/requireJSConfig.js"], function( ) {
+				require( ["jquery"], function( $ ) {
+					var headers = $("h1, h2, h3, h4, h5, h6");
+					var ele = $("<div/>", {
+						class: "page-nav"
+					})
+					var list = $("<ul/>");
+					var item = $("<li/>");
+					// TODO: create page navigation layout using header tags dynamically
+				} );
+			})
+		</script>
+		<!-- script end -->
+	</body>
+</html>

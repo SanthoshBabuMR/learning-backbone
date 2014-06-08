@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Backbone API - Model Instance</title>
+		<!-- css begin -->
+		<link rel="stylesheet" href="/public/css/render.css" />
+		<!-- css end -->
+	</head>
+	<body>
+
+		<!-- doc-wrap begin -->
+		<div class="doc-wrap">
+			<nav>
+				<a href="/">Home</a>
+			</nav>
+			<h1>Backbone API - Model Instance</h1>
+			<h2>Model Instance Events</h2>
+			<!-- grid-a begin -->
+			<div class="grid-a">
+				<!-- row begin -->
+				<div class="row">
+					<div class="block-a">
+						<h3>
+							event: CHANGE
+						</h3>
+					</div>
+					<div class="block-b">
+						<h4>
+							listen on individual attribute
+						</h4>
+						<span class="code-block">
+							<span>
+								this.on( "change:&lt;attributeName&gt;", function( &lt;modelInstance&gt;, &lt;newAttributeNameValue&gt;  ) {
+									<span>
+										// do stuff here
+									</span>
+								})
+							</span>
+						</span>
+						<h4>
+							listen on all attributes or the entire model
+						</h4>
+						<span class="code-block">
+							<span>
+								this.on( "change", function( &lt;modelInstance&gt; ) {
+									<span>
+										// do stuff here
+									</span>
+								})
+							</span>
+						</span>
+					</div>
+				</div>
+				<!-- row end -->
+
+				<!-- row begin -->
+				<div class="row">
+					<div class="block-a">
+						<h3>
+							event: INVALID
+						</h3>
+					</div>
+					<div class="block-b">
+						<h4>
+							listen on the model
+						</h4>
+						<span class="code-block">
+							<span>
+								this.on( "invalid", function( &lt;modelInstance&gt;, &lt;error&gt; ) {
+									<span>
+										// do stuff here
+									</span>
+								})
+							</span>
+						</span>
+					</div>
+				</div>
+				<!-- row end -->
+			</div>
+			<!-- grid-a end -->
+			
+		</div>
+		<!-- doc-wrap end -->
+
+
+		<!-- script begin -->
+		<script type="text/template" id="page-layout">
+			//TODO: template for page navigation layout
+		</script>
+		<script src="/public/script/lib/requirejs/require.js"></script>
+		<script>
+			require( ["/public/script/config/requireJSConfig.js"], function( ) {
+				require( ["jquery"], function( $ ) {
+					var headers = $("h1, h2, h3, h4, h5, h6");
+					var ele = $("<div/>", {
+						class: "page-nav"
+					})
+					var list = $("<ul/>");
+					var item = $("<li/>");
+					// TODO: create page navigation layout using header tags dynamically
+				} );
+			})
+		</script>
+		<!-- script end -->
+	</body>
+</html>

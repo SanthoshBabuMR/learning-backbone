@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Todo</title>
+		<!-- css begin -->
+		<link rel="stylesheet" href="/public/css/render.css" />
+		<!-- css end -->
+	</head>
+	<body>
+
+		<!-- doc-wrap begin -->
+		<div class="doc-wrap">
+			<!-- todo begin -->
+			<div id="todo">
+			</div>
+			<!-- todo end -->
+
+			<!-- item-template begin -->
+			<script type="text/template" id="item-template">
+				<div>
+					<input type="checkbox" id="todo_complete" <%= completed ? "checked='chekced'" : '' %>/>
+					<%- title %>
+				</div>
+			</script>
+			<!-- item-template end -->
+
+		</div>
+		<!-- doc-wrap end -->
+
+		<!-- script begin -->
+		<script src="/public/script/lib/requirejs/require.js"></script>
+		<script>
+			require( ["/public/script/config/requireJSConfig.js"], function( ) {
+				require( ["todo"] );
+			})
+		</script>
+		<!-- script end -->
+	</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Backbone API - Model Events</title
+		<!-- css begin -->
+		<link rel="stylesheet" href="/public/css/render.css" />
+		<!-- css end -->
+	</head>
+	<body>
+
+		<!-- doc-wrap begin -->
+		<div class="doc-wrap">
+			<nav>
+				<a href="/">Home</a>
+			</nav>
+			<h1>Backbone API - Model Events</h1>
+			<h2>Model Instance CRUD</h2>
+			<!-- grid-a begin -->
+			<div class="grid-a">
+				<!-- row begin -->
+				<div class="row">
+					<div class="block-a">
+						<h3>
+							CREATE attribute
+						</h3>
+					</div>
+					<div class="block-b">
+						<h4>
+							Set individual attribute
+						</h4>
+						<span class="code-block">
+							<span>
+								&lt;modelInstance&gt;.set( {
+									<span>
+										&lt;attributeName&gt;: 	"&lt;attributeValue&gt;"
+									</span>
+								} )
+							</span>
+						</span>
+						<h4>
+							Set multiple attributes
+						</h4>
+						<span class="code-block">
+							<span>
+								&lt;modelInstance&gt;.set( {
+									<span>
+										&lt;attributeName&gt;: 	"&lt;attributeValue&gt;"
+									</span>
+									<span>
+										, &lt;attributeName_N&gt;: 	"&lt;attributeValue_N&gt;"
+									</span>
+								} )
+							</span>
+						</span>
+					</div>
+				</div>
+				<!-- row end -->
+
+				<!-- row begin -->
+				<div class="row">
+					<div class="block-a">
+						<h3>
+							READ attribute
+						</h3>
+					</div>
+					<div class="block-b">
+						<h4>
+							Read individual attribute
+						</h4>
+						<span class="code-block">
+							<span>
+								&lt;modelInstance&gt;.get( "&lt;attributeName&gt;" )
+							</span>
+						</span>
+						<h4>
+							Read multiple attributes
+						</h4>
+						<span class="code-block">
+							<span>
+								&lt;modelInstance&gt;.toJSON( )
+							</span>
+						</span>
+					</div>
+				</div>
+				<!-- row end -->
+
+				<!-- row begin -->
+				<div class="row">
+					<div class="block-a">
+						<h3>
+							UPDATE attribute
+						</h3>
+					</div>
+					<div class="block-b">
+						<h4>
+							Update individual attribute
+						</h4>
+						<span class="code-block">
+							<span>
+								&lt;modelInstance&gt;.set( {
+									<span>
+										&lt;attributeName&gt;: 	"&lt;attributeValue&gt;"
+									</span>
+								} )
+							</span>
+						</span>
+						<h4>
+							Update multiple attributes
+						</h4>
+						<span class="code-block">
+							<span>
+								&lt;modelInstance&gt;.set( {
+									<span>
+										&lt;attributeName&gt;: 	"&lt;attributeValue&gt;"
+									</span>
+									<span>
+										, &lt;attributeName_N&gt;: 	"&lt;attributeValue_N&gt;"
+									</span>
+								} )
+							</span>
+						</span>
+					</div>
+				</div>
+				<!-- row end -->
+
+				<!-- row begin -->
+				<div class="row">
+					<div class="block-a">
+						<h3>
+							DELETE attribute
+						</h3>
+					</div>
+					<div class="block-b">
+						<h4>
+							DELETE individual attribute
+						</h4>
+						<span class="code-block">
+							<span>
+								&lt;modelInstance&gt;.unset( "&lt;attributeValue&gt;" )
+							</span>
+						</span>
+						<h4>
+							DELETE multiple attributes
+						</h4>
+						<span class="code-block">
+							<span>
+								&lt;modelInstance&gt;.clear( )
+							</span>
+						</span>
+					</div>
+				</div>
+				<!-- row end -->
+			</div>
+			<!-- grid-a end -->
+
+		</div>
+		<!-- doc-wrap end -->
+
+
+		<!-- script begin -->
+		<script type="text/template" id="page-layout">
+			//TODO: template for page navigation layout
+		</script>
+		<script src="/public/script/lib/requirejs/require.js"></script>
+		<script>
+			require( ["/public/script/config/requireJSConfig.js"], function( ) {
+				require( ["jquery"], function( $ ) {
+					var headers = $("h1, h2, h3, h4, h5, h6");
+					var ele = $("<div/>", {
+						class: "page-nav"
+					})
+					var list = $("<ul/>");
+					var item = $("<li/>");
+					// TODO: create page navigation layout using header tags dynamically
+				} );
+			})
+		</script>
+		<!-- script end -->
+	</body>
+</html>
